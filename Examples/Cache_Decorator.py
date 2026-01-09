@@ -1,10 +1,7 @@
-from functools import wraps
-
-
 def open_web(func):
 
     cache = {}
-            
+
     def wrapper(*args, **kwargs):
         if len(args) == 1 and not kwargs:
             key = args[0]
